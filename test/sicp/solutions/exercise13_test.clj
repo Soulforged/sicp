@@ -1,6 +1,6 @@
-(ns sicp.exercise13-test
+(ns sicp.solutions.exercise13-test
   (:require [clojure.test :refer :all]
-            [sicp.exercise13 :refer :all]))
+            [sicp.solutions.exercise13 :refer :all]))
 
 (deftest should-return-sum-of-squares-of-highests
   (testing "Exercise 1.3: Define a procedure that takes three numbers

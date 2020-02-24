@@ -8,7 +8,7 @@
 ; In general, the technique of defining an invariant quantity that remains
 ; unchanged from state to state is a powerful way to think about the design of
 ; iterative algorithms.)
-(ns sicp.exercise116
+(ns sicp.solutions.exercise116
   (:require [sicp.math :as math :refer [pow]]))
 
 (defn run [b n] (pow b n))

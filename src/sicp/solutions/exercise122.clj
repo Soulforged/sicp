@@ -1,4 +1,4 @@
-(ns sicp.exercise122
+(ns sicp.solutions.exercise122
   (:require [sicp.util :as util :refer [runtime]]
             [sicp.math :as math :refer [sdiv]]))
 

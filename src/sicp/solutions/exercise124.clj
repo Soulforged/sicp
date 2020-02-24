@@ -1,4 +1,4 @@
-(ns sicp.exercise124
+(ns sicp.solutions.exercise124
   (:require [sicp.math :as math :refer [prime?]]))
 
 ; Exercise 1.24: Modify the timed-prime-test procedure of

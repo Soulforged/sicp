@@ -1,0 +1,24 @@
+{:objects
+  {:exercise
+    {:description "A description of a problem to solve with a reference to a solution."
+    :fields
+      {:id {:type (non-null ID)}
+      :name {:type (non-null String)}
+      :title {:type String
+                :description "A one-line title."}
+      :description {:type String
+                    :description "A long-form description of the exercise."}}}}
+
+:queries
+  {:exercise
+    {:type :exercise
+    :description "Get an exercise by its unique id, if it exists."
+    :args {:id {:type ID}}
+    :resolve :exercise}
+  :exercises
+    {:type (list :exercise)
+    :description "Get all exercises by a filter query."
+    :args {
+      :name {:type String}
+      :title {:type String}}
+    :resolve :exercises}}}

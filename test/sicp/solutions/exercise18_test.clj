@@ -1,6 +1,6 @@
-(ns sicp.exercise18-test
+(ns sicp.solutions.exercise18-test
   (:require [clojure.test :refer :all]
-            [sicp.exercise18 :refer :all]))
+            [sicp.solutions.exercise18 :refer :all]))
 
 (deftest should-return-cube-root
   (testing "Exercise 1.8: ..."

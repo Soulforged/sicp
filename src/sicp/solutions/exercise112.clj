@@ -10,7 +10,7 @@
 ; number inside the triangle is the sum of the two numbers
 ; above it. Write a procedure that computes elements of
 ; Pascal’s triangle by means of a recursive process.
-(ns sicp.exercise112)
+(ns sicp.solutions.exercise112)
 
 ; TODO I need to return to this, it doesn't work properly.
 (defn run [n]

@@ -1,6 +1,6 @@
-(ns sicp.exercise117-test
+(ns sicp.solutions.exercise117-test
   (:require [clojure.test :refer :all]
-            [sicp.exercise117 :refer :all]))
+            [sicp.solutions.exercise117 :refer :all]))
 
 (deftest should-work
   (testing "Exercise 1.17: ..."

@@ -1,4 +1,4 @@
-(ns sicp.exercise119
+(ns sicp.solutions.exercise119
   (:require [sicp.math :as math :refer [fib]]))
 
 ; Exercise 1.19: Theere is a clever algorithm for computing

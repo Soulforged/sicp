@@ -15,7 +15,7 @@
 ; divides an (even) integer by 2. Using these, design a mul-
 ; tiplication procedure analogous to fast-expt that uses a
 ; logarithmic number of steps.
-(ns sicp.exercise117)
+(ns sicp.solutions.exercise117)
 
 (defn run [a b]
   (defn double [a] (+ a a))
