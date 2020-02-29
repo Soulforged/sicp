@@ -7,6 +7,7 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                 [org.clojure/math.numeric-tower "0.0.4"]
                 [clojure-interop/java.lang "1.0.5"]
+                [com.stuartsierra/component "0.4.0"]
                 [com.walmartlabs/lacinia-pedestal "0.13.0"]
                 [io.aviso/logging "0.3.2"]]
   :repl-options {:init-ns sicp.core})
