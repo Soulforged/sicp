@@ -1,6 +1,9 @@
 (ns sicp.core
   (:require [sicp.system :as system]
-            [com.stuartsierra.component :as component]))
+            [com.stuartsierra.component :as component]
+            [clojure.java.browse :refer [browse-url]]))
+
+(defonce system (system/new-system))
 
 (defn start
   []
