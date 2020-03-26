@@ -5,8 +5,8 @@
     [com.walmartlabs.lacinia.schema :as schema]
     [com.walmartlabs.lacinia.util :as util]
     [sicp.ql.resolvers :as resolvers]
+    [sicp.datasource.db :as db]
     [com.stuartsierra.component :as component]))
-
 
 (defn load-and-compile 
   ([schema-res resolver-map]
@@ -15,7 +15,7 @@
       schema/compile))
   ([component]
     (-> (loader/load "sicp/ql/schema.edn")
-        (util/attach-resolvers (resolvers/create-map))
+        (util/attach-resolvers (resolvers/create-map (:db component)))
         schema/compile)))
 
 (defrecord SchemaProvider [schema]
@@ -29,4 +29,6 @@
     (assoc this :schema nil)))
 
 (defn new-schema-provider []
-  {:schema-provider (map->SchemaProvider {})})
+  {:schema-provider (-> {}
+                        map->SchemaProvider
+                        (component/using [:db]))})

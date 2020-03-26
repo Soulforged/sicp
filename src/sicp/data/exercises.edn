@@ -1,18 +1,96 @@
-{:exercises
+{:users 
+  [{:id "1" :name "admin"}
+  {:id "2" :name "other"}]
+
+ :solutions
+  [{:id "1"
+    :user #{"1"}
+    :passes true
+    :file "sicp/solutions/exercise12.clj"
+    :lang "clj"
+    :exercise "1"}
+   {:id "2"
+    :user #{"1"}
+    :passes true
+    :file "sicp/solutions/exercise13.clj"
+    :lang "clj"
+    :exercise "2"}
+   {:id "3"
+    :user #{"1"}
+    :passes true
+    :file "sicp/solutions/exercise18.clj"
+    :lang "clj"
+    :exercise "3"}
+   {:id "4"
+    :user #{"1"}
+    :passes true
+    :file "sicp/solutions/exercise111.clj"
+    :lang "clj"
+    :exercise "4"}
+   {:id "5"
+    :user #{"1"}
+    :passes true
+    :file "sicp/solutions/exercise112.clj"
+    :lang "clj"
+    :exercise "5"}
+   {:id "6"
+    :user #{"1"}
+    :passes true
+    :file "sicp/solutions/exercise116.clj"
+    :lang "clj"
+    :exercise "6"}
+   {:id "7"
+    :user #{"2"}
+    :passes true
+    :file "sicp/solutions/exercise117.clj"
+    :lang "clj"
+    :exercise "7"}
+   {:id "8"
+    :user #{"2"}
+    :passes true
+    :file "sicp/solutions/exercise119.clj"
+    :lang "clj"
+    :exercise "8"}
+   {:id "9"
+    :user #{"1"}
+    :passes true
+    :file "sicp/solutions/exercise122.clj"
+    :lang "clj"
+    :exercise "9"}
+   {:id "10"
+    :user #{"1"}
+    :passes true
+    :file "sicp/solutions/exercise124.clj"
+    :lang "clj"
+    :exercise "10"}]
+
+ :exercises
  [{:id "1"
    :name "1.2"
    :title "Exercise 1.2"
+   :possible_solutions #{"1"}
+   :featured_solution "1"
+   :required_lang "clj"
+   :file "test/solutions/exercise12_test.clj"
    :description "Translate the following expression into prefix 
     form: (5 + 4 + (2 − (3 − (6 + 4/5)))) / 3(6 − 2)(2 − 7)"}
   {:id "2"
    :name "1.3"
    :title "Exercise 1.3"
+   :possible_solutions #{"2"}
+   :featured_solution "2"
+   :required_lang "clj"
+   :file  "test/solutions/exercise13_test.clj"
    :description "Define a procedure that takes three numbers
     as arguments and returns the sum of the squares of the two
     larger numbers."}
   {:id "3"
    :name "1.8"
    :title "Exercise 1.8"
+   :possible_solutions #{"3"}
+   :featured_solution "3"
+   :required_lang "clj"
+   :file "test/solutions/exercise18_test.clj"
    :description "Newton’s method for cube roots is based on
     the fact that if y is an approximation to the cube root of x,
     then a better approximation is given by the value
@@ -24,6 +102,10 @@
   {:id "4"
    :name "1.11"
    :title "Exercise 1.11"
+   :possible_solutions #{"4"}
+   :featured_solution "4"
+   :required_lang "clj"
+   :file "test/solutions/exercise111_test.clj"
    :description "A function f is defined by the rule that
     f(n) if n < 3,
     f (n − 1) + 2f (n − 2) + 3f (n − 3) if n ≥ 3.

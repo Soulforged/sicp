@@ -3,6 +3,7 @@
             [com.walmartlabs.lacinia :refer [execute]]
             [sicp.ql.schema :as schema]
             [sicp.ql.resolvers :as resolvers]
+            [sicp.datasource.db :as db]
             [clojure.walk :as walk])
   (:import (clojure.lang IPersistentMap)))
 

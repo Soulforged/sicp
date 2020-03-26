@@ -4,5 +4,5 @@
 
 (defn load [res-path]
   (-> (io/resource res-path)
-    slurp
-    edn/read-string))
+      slurp
+      edn/read-string))

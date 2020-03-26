@@ -1,11 +1,50 @@
 {:objects
-  {:exercise
+  {:user
+    {:description "A user who can submit solutions."
+    :fields
+      {:id {:type (non-null ID)}
+      :name {:type (non-null String)}}}
+  :solution
+    {:description "The details of a possible solution to a problem."
+    :fields
+      {:id {:type (non-null ID)}
+      :user {:type (non-null :user)
+              :resolve :solution/user}
+      :description {:type String
+                    :description "An optional summary of the solution."}
+      :passes {:type Boolean
+              :description "Is this an effective solution?"}
+      :file {:type String
+                  :description "A file with the code implementation. 
+                    If this is available it will be source for 'code'"}
+      :code {:type String
+              :description "Actual implementation of the solution."
+              :resolve :solution/code}
+      :lang {:type String
+              :description "Language used for the implementation"}
+      :exercise {:type (non-null :exercise)
+                 :resolve :solution/exercise
+                 :description "The exercise this solution tries to solve"}}}
+  :exercise
     {:description "A description of a problem to solve with a reference to a solution."
     :fields
       {:id {:type (non-null ID)}
       :name {:type (non-null String)}
+      :possible_solutions {:type (list :solution)
+                          :resolve :exercise/possible_solutions}
+      :featured_solution {:type :solution
+                          :resolve :exercise/featured_solution}
       :title {:type String
                 :description "A one-line title."}
+      :required_lang {:type String 
+                      :description "The language a user should use to solve this. 
+                        Empty if any can be used"}
+      :file {:type String
+                  :description "A file with the code implementation. 
+                    If this is available it will be source for 'test'"}
+      :test {:type String 
+             :description "The test performed to see if the solution passes"
+             :resolve :exercise/test}
       :description {:type String
                     :description "A long-form description of the exercise."}}}}
 
